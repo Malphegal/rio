@@ -32,6 +32,10 @@ header nav a {
 
 /* ---- Main ---- */
 
+a {
+    text-decoration: none;
+}
+
 main {
     border-bottom: black 2px solid;
 }
@@ -70,7 +74,6 @@ main {
     float: right;
     line-height: 210%;
     padding: 0 10px;
-    text-decoration: none;
     margin: 3px 10px;
 }
 
@@ -110,14 +113,19 @@ aside > div {
     text-align: center;
 }
 
+aside > div > a > img {
+    width: 18%;
+    max-width: 32px;
+}
+
 #rioflag {
     width: 60%;
     margin: 0% 20%
 }
 
-aside > div > a > img {
-    width: 18%;
-    max-width: 32px;
+article p {
+    text-align: justify;
+    margin: 0 20px 20px 0;
 }
 
 /* ---- footer ---- */
@@ -140,4 +148,8 @@ footer > * {
 
 form {
     display: block;
+}
+
+img:active {
+    transform: translateY(-300%) scale(7);
 }
