@@ -4,4 +4,8 @@ Ce projet se porte sur la reproduction d'un site papier en un site web
 
 ## Fichiers
 
-[En cours de développement]
+L'arborescence est le suivant :
+
+* img/
+* js/
+* css/
