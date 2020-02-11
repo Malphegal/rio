@@ -151,5 +151,6 @@ form {
 }
 
 img:active {
-    transform: translateY(-300%) scale(7);
+    transform-origin: 50% 100%;
+    transform: scale(7);
 }
