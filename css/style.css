@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 header {
     display: flex;
     border-bottom: 2px solid;
@@ -9,15 +12,22 @@ header > img {
 
 header nav {
     position: relative;
+    width: 80%;
+    display: flex;
+    
 }
 
 header nav ul {
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
     position: absolute;
     bottom: 5px;
+    font-size: 1.5EM;
 }
 
 header nav li {
@@ -57,12 +67,17 @@ main {
     width: 100%;
     height: 15%;
     background-color: #33333388;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2em;
+
 }
 
 #bandeau > p {
-    display: inline-block;
+    
     margin: 10px;
     text-shadow: 1px 1px 2px black;
+    width: 20%;
 }
 
 #bandeau a {
@@ -70,11 +85,13 @@ main {
     color: white;
     border-color: #bb3333;
     border-radius: 8px;
-    height: 86%;
-    float: right;
-    line-height: 210%;
-    padding: 0 10px;
-    margin: 3px 10px;
+    height: 100%;
+    padding: 10px 12px;
+    
+    margin-bottom: 0.2em;
+    
+  
+    
 }
 
 #questionmarkdiv {
@@ -150,7 +167,7 @@ form {
     display: block;
 }
 
-img:active {
+#bigimg img:active {
     transform-origin: 50% 100%;
     transform: scale(7);
 }
