@@ -31,7 +31,16 @@ header nav {
     padding-bottom: 0.5em;
 }
 
+#threelines {
+    display: none;
+}
+
 /* ---- Main ---- */
+
+body {
+    max-width: 1200px;
+    margin: auto;
+}
 
 #beachsection {
     background-image: url('../img/beach.jpg');
@@ -136,7 +145,7 @@ aside > div > a > img {
     font-weight: 700;
 }
 
-/* ---- footer ---- */
+/* ---- Footer ---- */
 
 footer {
     display: flex;
@@ -168,8 +177,38 @@ footer > * {
     transform: scale(5);
 }
 
+/* ---- Responsive ---- */
+
 @media screen and (max-width: 640px) {
     #information {
         display: block;
+    }
+
+    input:checked {
+        background-color: red;
+    }
+    
+    #threelines {
+        display: block;
+    }
+	
+	header {
+        background-color: #ec8c52;
+        height: 50px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    header img {
+        height: 50px;
+        width: auto;
+    }
+
+    #bandeau p {
+        font-size: 11px;
+    }
+
+    #nav, #headerimg {
+        display: none;
     }
 }

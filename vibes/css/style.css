@@ -1,0 +1,239 @@
+:root {
+    --colorpicker: #ef7a36;
+    --linecolor: #bbb;
+}
+
+html{
+    background-color: var(--colorpicker)
+}
+
+body{
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+}
+
+/* ---- GENERAL ---- */
+
+.smallline{
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--colorpicker);
+    margin: 20px auto;
+}
+
+.coloredbtn{
+    height: 3em;
+    background-color: transparent;
+    border: var(--colorpicker) 1px solid;
+    color: var(--colorpicker);
+    border-radius: 3px;
+    width: fit-content;
+    padding: 0 1.5em;
+    margin: 0 auto;
+}
+
+section{
+    text-align: center;
+}
+
+/* ---- TITLE SECTION ---- */
+
+#titlesection{
+    background-image: url("../img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+#titlesection button{
+    border: solid 0.1em white;
+    border-radius: 3px;
+    background-color: transparent;
+    color: white;
+    padding: 0.4em 0.7em;
+}
+
+/* ---- DESC SECTION ---- */
+
+#descsection{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#descsection > p:last-child{
+    font-size: smaller;
+}
+
+#descsection dt > *:first-child{
+    margin-right: 0.5em;
+}
+
+#descsection dd{
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+
+/* ---- GALLERY SECTION ---- */
+
+#gallerysection figure{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+#gallerysection figure > div{
+    flex: 1 0 25%;
+    margin: 0;
+    height: 200px;
+    width: 25%;
+}
+
+#gallerysection figure > div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* TODO: Utiliser une alternative pour de la compatibilité */
+}
+
+#gallerysection > div{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--linecolor);
+}
+
+#gallerysection ul{
+    display: flex;
+    height: 3em;
+    align-items: center;
+}
+
+#gallerysection ul li{
+    list-style-type: none;
+    margin: 0 0.8em;
+}
+
+#gallerysection button{
+    margin: auto 4em auto 0;
+}
+
+/* ---- TESTIMONIAL SECTION ---- */
+
+#testimonialsection{
+    padding: 0 3em;
+}
+
+#testimonialsection hr{
+    width: 70%;
+    margin: 1.5em auto;
+}
+
+/* Ancienne version avec un ::after pour les traits des testimonial
+#testimonialsection figure:not(:last-child)::after{
+    background-color: var(--linecolor); 
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%,0);
+    width: 65%;
+    margin-top: 1em;
+}*/
+
+#testimonialsection figure{
+    width: 80%;
+    margin: auto;
+}
+
+#testimonialsection img{
+    max-height: 64px;
+}
+
+#testimonialsection figure:nth-child(2n+1){
+    text-align: left;
+}
+
+#testimonialsection figure:nth-child(2n){
+    text-align: right;
+}
+
+#testimonialsection figure > div{
+    display: flex;
+    margin-bottom: 1.5em;
+}
+
+#testimonialsection figure:nth-child(2n) > div{
+    flex-direction: row-reverse;
+}
+
+.citename{
+    font-weight: 700;
+}
+
+#testimonialsection > button{
+    margin: 2em 0;
+}
+
+/* ---- PARALLAX SECTION ---- */
+
+#parallaxsection{
+    background-image: url("../img/parallax.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 1px 1px 3px black;
+    color: white;
+}
+
+#parallaxsection p{
+    width: 70%;
+    margin: 0 auto 2em auto;
+}
+
+/* ---- FORM SECTION ---- */
+
+#formsection form > div{
+    display: flex;
+    justify-content: center;
+}
+
+#formsection form > div > div{
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em;
+    width: 40%;
+}
+
+#formsection form input, #formsection form textarea{
+    margin: 0.6em auto;
+}
+
+#formsection form > div textarea{
+    width: 100%;
+    height: 50%;
+}
+
+#formsection form > div input{
+    /*margin: 0.6em auto;*/
+    height: 2em;
+    width: 100%;
+
+    /*
+    */
+}
+
+#formsection form > input{
+    margin-left: 6.3em;
+}
