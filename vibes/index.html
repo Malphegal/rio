@@ -6,21 +6,26 @@
         <title>Le projet vibes</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
         <link rel="stylesheet" href="css/style.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     </head>
     <body>
+        <header class="textshadowed">
+            <img src="img/logo.jpg" alt="logo site" />
+            <nav>
+                <a href="#">HOME</a>
+                <a href="#descsection">ABOUT</a>
+                <a href="#gallerysection">PORTFOLIO</a>
+                <a href="#testimonialsection">TESTIMONIALS</a>
+                <a href="#formsection">CONTACT</a>
+                <a href="#">PAGES</a>
+            </nav>
+        </header>
         <main>
-            <header>
-                <img src="" alt="" />
-                <nav>
-                    <a href="#">HOME</a>
-                    <a href="#descsection">ABOUT</a>
-                    <a href="#gallerysection">PORTFOLIO</a>
-                    <a href="#testimonialsection">TESTIMONIALS</a>
-                    <a href="#formsection">CONTACT</a>
-                    <a href="#">PAGES</a>
-                </nav>
-            </header>
-            <section id="titlesection">
+            <div id="colorpicker">
+                <input type="color" value="#ef7a36">
+                <i class="fas fa-tint"></i>
+            </div>
+            <section id="titlesection" class="textshadowed">
                 <h1>
                     HTML TEMPLATE FOR CREATIVE FOLKS AND DESIGN AGENCIES
                 </h1>
@@ -31,16 +36,16 @@
                     READ MORE
                 </button>
             </section>
-            <section id="descsection">
+            <section id="descsection" class="flexed padding-0-5 x3">
                 <div>
                     <h2>
                         Why choose us ?
                     </h2>
                     <p>
-                        Far far away, behind the word mountains...
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur error quos perspiciatis
                     </p>
                     <p>
-                        Far far away, behind the word mountains...
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni omnis tempora reprehenderit
                     </p>
                 </div>
                 <div>
@@ -56,61 +61,61 @@
                         <dd>Create Custom Skins In Minutes</dd>
                     </dl>
                 </div>
-                <div>
+                <div id="accordeon">
                     <div>
-                        NULLA CONSEQUAT
+                        <h4><i class="fas fa-minus"></i> NULLA CONSEQUAT MASSA</h4>
+                        <p>Bla bla</p>
                     </div>
                     <div>
-                        VIVAMES ELEMENTUM SEMPER
+                        <h4><i class="fas fa-plus"></i> VIVAMES ELEMENTUM SEMPER</h4>
+                        <p class="accordeon-hide">Bla bla</p>
                     </div>
                     <div>
-                        ETIAM ULTRICIES NISI VEL
+                        <h4><i class="fas fa-plus"></i> ETIAM ULTRICIES NISI VEL</h4>
+                        <p class="accordeon-hide">Bla bla</p>
                     </div>
                 </div>
             </section>
             <section id="gallerysection">
+                <div id="modal">
+                    <div class="modal-image">
+                        <span class="closemodal">&times;</span>
+                    </div>
+                </div>
                 <figure>
-                    <div>
-                        <img src="img/figure/1.jpg" /> <!-- ALT -->
+                    <div class="gallery-image">
+                        <img src="img/figure/1.jpg" /> <!-- TODO: ALT -->
                     </div>
-                    <div>
-                        <img src="img/figure/2.jpg" /> <!-- ALT -->
+                    <div class="gallery-image">
+                        <img src="img/figure/2.jpg" /> <!-- TODO: ALT -->
                     </div>
-                    <div>
-                        <img src="img/figure/3.jpg" /> <!-- ALT -->
+                    <div class="gallery-video">
+                        <a href="https://www.youtube.com/watch?v=YfhBguKKkLs" target="_blank"><img src="img/figure/3.jpg" /></a> <!-- TODO: ALT -->
                     </div>
-                    <div>
-                        <img src="img/figure/4.jpg" /> <!-- ALT -->
+                    <div class="gallery-audio">
+                        <img src="img/figure/4.jpg" /> <!-- TODO: ALT -->
                     </div>
-                    <div>
-                        <img src="img/figure/5.jpg" /> <!-- ALT -->
+                    <div class="gallery-image">
+                        <img src="img/figure/5.jpg" /> <!-- TODO: ALT -->
                     </div>
-                    <div>
-                        <img src="img/figure/6.jpg" /> <!-- ALT -->
+                    <div class="gallery-video">
+                        <a href="https://www.youtube.com/watch?v=KWv3qVTLsTw" target="_blank"><img src="img/figure/6.jpg" /></a> <!-- TODO: ALT -->
                     </div>
-                    <div>
-                        <img src="img/figure/7.jpg" /> <!-- ALT -->
+                    <div class="gallery-audio">
+                        <img src="img/figure/7.jpg" /> <!-- TODO: ALT -->
                     </div>
-                    <div>
-                        <img src="img/figure/8.jpg" /> <!-- ALT -->
+                    <div class="gallery-image">
+                        <img src="img/figure/8.jpg" /> <!-- TODO: ALT -->
                     </div>
                 </figure>
-                <div>
+                <div id="gallerysort">
                     <ul>
-                        <li>
-                            ALL
-                        </li>
-                        <li>
-                            AUDIO
-                        </li>
-                        <li>
-                            IMAGE
-                        </li>
-                        <li>
-                            VIDEO
-                        </li>
+                        <li class="colorpicked">ALL</li>
+                        <li>AUDIO</li>
+                        <li>IMAGE</li>
+                        <li>VIDEO</li>
                     </ul>
-                    <button class="coloredbtn">
+                    <button class="coloredbtn colorpicked">
                         LOAD MORE
                     </button>
                 </div>
@@ -153,20 +158,20 @@
                 <figure>
                     <div>
                         <img src="img/avatar/avatar3.png" />
-                        <blockquote>
+                        <q>
                             Maecenas nec odio et ante tincidunt tempus.
                             Donec vitae sapien ut libero venenatis faucibus.
-                        </blockquote>
+                        </q>
                     </div>
                     <figcaption>
-                        - <cite class="citename">Mick Neil</cite>, <cite>Rock Star</cite>
+                        - <strong class="citename">Mick Neil</strong>, Rock Star
                     </figcaption>
                 </figure>
-                <button class="coloredbtn">
+                <button class="coloredbtn colorpicked">
                     BECOME OUR CLIENT
                 </button>
             </section>
-            <section id="parallaxsection">
+            <section id="parallaxsection" class="textshadowed">
                 <h2>
                     NEW HORIZONS AWAIT
                 </h2>
@@ -179,7 +184,7 @@
                     voluptas non cum voluptate quia commodi, veniam harum recusandae!
                     Repellat quasi in sunt cupiditate asperiores.
                 </p>
-                <button class="coloredbtn">
+                <button class="coloredbtn colorpicked">
                     BUY VIBES ON THEMEFOREST
                 </button>
             </section>
@@ -187,12 +192,15 @@
                 <h2>
                     GET IN TOUCH
                 </h2>
+                <div class="smallline">
+
+                </div>
                 <form>
                     <div>
                         <div>
-                            <label>Your name</label>
+                            <label class="requiredlabel">Your name</label>
                             <input type="text" id="yourname" />
-                            <label>Your e-mail</label>
+                            <label class="requiredlabel">Your e-mail</label>
                             <input type="email" id="youremail" />
                             <label>Your phone number</label>
                             <input type="tel" id="yourphone" />
@@ -200,18 +208,21 @@
                         <div>
                             <label>Subject</label>
                             <input type="text" id="yoursubject" />
-                            <label>Message</label>
+                            <label class="requiredlabel">Message</label>
                             <textarea>TEST</textarea>
                         </div>
                     </div>
-                    <input type="submit" id="submit" value="SEND" />
+                    <input type="submit" id="submit" value="SEND" class="coloredbtn colorpicked" />
                 </form>
             </section>
-            <section id="aboutsection">
+            <section id="aboutsection" class="flexed">
                 <div>
                     <h3>
                         ABOUT VIBES
                     </h3>
+                    <div class="smallline">
+
+                    </div>
                     <p>
                         VIBES is an ideal theme for creative folks or design agencies.
                         <strong>Ease of use and top-notch web design techniques</strong>
@@ -225,34 +236,44 @@
                     <h3>
                         NEWSLETTER
                     </h3>
+                    <div class="smallline">
+
+                    </div>
                     <p>
-                        <strong>VIBES</strong>contains fully working
-                        <strong>MailChimp</strong>subscribe form.
+                        <strong>VIBES</strong> contains fully working
+                        <strong>MailChimp</strong> subscribe form.
                     </p>
                     <form>
                         <input type="email" id="aboutemail" placeholder="Your Email Address" />
-                        <input type="button" value="SUBSCRIBE" />
+                        <input type="button" value="SUBSCRIBE" class="coloredbtn colorpicked" />
                     </form>
                 </div>
                 <div>
                     <h3>
                         TWITTER FEED
                     </h3>
+                    <div class="smallline">
+
+                    </div>
                     <p>
-                        •••••
+                        <i class="fas fa-square"></i>
+                        <i class="fas fa-square"></i>
+                        <i class="fas fa-square"></i>
+                        <i class="fas fa-square"></i>
+                        <i class="fas fa-square"></i>
                     </p>
-                </div>            
+                </div>
             </section>
         </main>
-        <footer>
+        <footer class="flexed textshadowed">
             <p>
                 Buy this theme on ThemeForest.net
             </p>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Elements</a></li>
-                <li><a href="">Documentation</a></li>
-            </ul>
+            <div>
+                <a href="">Home</a>
+                <a href="">Elements</a>
+                <a href="">Documentation</a>
+            </div>
         </footer>
         <script src="js/script.js"></script>
     </body>
