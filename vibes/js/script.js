@@ -16,9 +16,9 @@ $("document").ready(function (){
         $(".smallline").css("background-color", $(this).val());
         $(".coloredbtn").css("border", "1px " + $(this).val() + " solid");
 
-        // Inverser la couleur de la goutte par rapport à la couleur du fond
+        // Inverser la couleur de la goutte et du button burger par rapport à la couleur du fond
         let hexValue = invertColor($(this).val());
-        $("#colorpicker i").css("color", hexValue);
+        $("#colorpicker i, #burgerbtn i").css("color", hexValue);
     })
 
     // Permet de faire le tri dans la 'gallery'
@@ -28,7 +28,7 @@ $("document").ready(function (){
         $("#gallerysort li").css("color", "#000");
         $(this).css("color", $("#colorpicker input").val());
         
-        let className = "gallery-" + $(this).html().toLowerCase();
+        let className = "gallery-" + $(this).text().toLowerCase();
         if (className == "gallery-all")
             $("#gallerysection figure > div").css("display", "block");
         else
@@ -45,19 +45,32 @@ $("document").ready(function (){
     $("#gallerysection *.gallery-video").append("<i class=\"fas fa-film\"></i>");
     $("#gallerysection *.gallery-audio").append("<i class=\"fas fa-music\"></i>");
 
+
+    // Gestion de l'image modal
     $("#gallerysection *.gallery-image").on("click", function(){
         let image = $(this).find("img").attr("src");
-        console.log(image);
         $(".modal-image").css("background-image", "url(\"./" + image + "\")");
         $("#modal").css("display", "flex");
     });
 
     $("#modal span").on("click", function(){
         $("#modal").css("display", "none");
-    })
+    });
+
+    // Afficher le menu burger
+    $("#burgerbtn").on("click", function(){
+        $("header").toggleClass("headerclass-collapsed");
+        $("header").toggleClass("headerclass-extended");
+        if ($("header").hasClass("headerclass-extended"))
+            $("nav a").css("display", "block");
+        else
+        $("nav a").css("display", "none");
+    });
 });
 
 const invertColor = (col) => {
+    if (col == "#808080")
+        return "#999999";
     const colors = ['0', '1', '2', '3', '4', '5', '6', '7',
                     '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
     let inverseColor = '#';

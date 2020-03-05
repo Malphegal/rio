@@ -19,6 +19,7 @@
                 <a href="#formsection">CONTACT</a>
                 <a href="#">PAGES</a>
             </nav>
+            <a id="burgerbtn"><i class="fas fa-bars textshadowed"></i></a>
         </header>
         <main>
             <div id="colorpicker">
@@ -36,7 +37,7 @@
                     READ MORE
                 </button>
             </section>
-            <section id="descsection" class="flexed padding-0-5 x3">
+            <section id="descsection" class="flexed padding-0-3 x3">
                 <div>
                     <h2>
                         Why choose us ?
@@ -78,31 +79,31 @@
             </section>
             <section id="gallerysection">
                 <div id="modal">
+                    <span class="closemodal">&times;</span>
                     <div class="modal-image">
-                        <span class="closemodal">&times;</span>
                     </div>
                 </div>
                 <figure>
                     <div class="gallery-image">
-                        <img src="img/figure/1.jpg" /> <!-- TODO: ALT -->
+                        <img src="img/figure/1.jpg" alt="snatti : Corgi puppy"/>
                     </div>
                     <div class="gallery-image">
-                        <img src="img/figure/2.jpg" /> <!-- TODO: ALT -->
+                        <img src="img/figure/2.jpg" alt="snatti : Kiki's winter delivery service"/>
                     </div>
                     <div class="gallery-video">
-                        <a href="https://www.youtube.com/watch?v=YfhBguKKkLs" target="_blank"><img src="img/figure/3.jpg" /></a> <!-- TODO: ALT -->
+                        <a href="https://www.youtube.com/watch?v=KWv3qVTLsTw" target="_blank"><img src="img/figure/3.jpg" alt="snatti : stairs"/></a>
                     </div>
                     <div class="gallery-audio">
-                        <img src="img/figure/4.jpg" /> <!-- TODO: ALT -->
+                        <a href="https://soundcloud.com/sathit-intangible-wichaidit/the-garden-of-words" target="_blank"><img src="img/figure/4.jpg" alt="snatti : Garden words"/></a>
                     </div>
                     <div class="gallery-image">
-                        <img src="img/figure/5.jpg" /> <!-- TODO: ALT -->
+                        <img src="img/figure/5.jpg" alt="snatti : Your name"/>
                     </div>
                     <div class="gallery-video">
-                        <a href="https://www.youtube.com/watch?v=KWv3qVTLsTw" target="_blank"><img src="img/figure/6.jpg" /></a> <!-- TODO: ALT -->
+                        <a href="https://www.youtube.com/watch?v=YfhBguKKkLs" target="_blank"><img src="img/figure/6.jpg" alt="snatti : Sketech collection 12 2018"/></a>
                     </div>
                     <div class="gallery-audio">
-                        <img src="img/figure/7.jpg" /> <!-- TODO: ALT -->
+                        <a href="https://open.spotify.com/album/3owrJe0OzNBOS5EpAhFRmW" target="_blank"><img src="img/figure/7.jpg" alt="snatti : Princess Mononoke"/></a>
                     </div>
                     <div class="gallery-image">
                         <img src="img/figure/8.jpg" /> <!-- TODO: ALT -->
@@ -110,17 +111,17 @@
                 </figure>
                 <div id="gallerysort">
                     <ul>
-                        <li class="colorpicked">ALL</li>
-                        <li>AUDIO</li>
-                        <li>IMAGE</li>
-                        <li>VIDEO</li>
+                        <li class="colorpicked"><a href="#gallerysection">ALL</a></li>
+                        <li><a href="#gallerysection">AUDIO</a></li>
+                        <li><a href="#gallerysection">IMAGE</a></li>
+                        <li><a href="#gallerysection">VIDEO</a></li>
                     </ul>
                     <button class="coloredbtn colorpicked">
                         LOAD MORE
                     </button>
                 </div>
             </section>
-            <section id="testimonialsection">
+            <section id="testimonialsection" class="padding-0-3">
                 <h2>
                     CLIENT TESTIMONIALS
                 </h2>
@@ -209,13 +210,13 @@
                             <label>Subject</label>
                             <input type="text" id="yoursubject" />
                             <label class="requiredlabel">Message</label>
-                            <textarea>TEST</textarea>
+                            <textarea placeholder="Veuillez écrire votre message ici..."></textarea>
                         </div>
                     </div>
                     <input type="submit" id="submit" value="SEND" class="coloredbtn colorpicked" />
                 </form>
             </section>
-            <section id="aboutsection" class="flexed">
+            <section id="aboutsection" class="flexed padding-0-3">
                 <div>
                     <h3>
                         ABOUT VIBES
@@ -260,7 +261,7 @@
                         <i class="fas fa-square"></i>
                         <i class="fas fa-square"></i>
                         <i class="fas fa-square"></i>
-                        <i class="fas fa-square"></i>
+                        <i class="fas fa-square fa-spin"></i>
                     </p>
                 </div>
             </section>
