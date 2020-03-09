@@ -215,18 +215,20 @@ input[type="color"]::-webkit-color-swatch {
     border: 1px black solid;
     margin: 0.5em 0;
     padding: 0 2em;
+    overflow: hidden;
 }
 
 #accordeon h4{
     margin-left: -1.2em;
 }
 
-.accordeon-hide{
-    display: none;
+#accordeon > div p{
+    transition: height, margin 1s;
 }
 
-.accordeon-show{
-    display: block;
+.accordeon-hide{
+    height: 0px;
+    margin: 0;
 }
 
 /* ---- GALLERY SECTION ---- */
@@ -247,7 +249,6 @@ input[type="color"]::-webkit-color-swatch {
 #modal > div{
     width: 60%;
     height: 60%;
-    background-image: url("./../img/parallax.jpg");
     position: relative;
     margin: auto;
     background-repeat: no-repeat;
@@ -634,5 +635,8 @@ footer div{
         height: 200px;
         width: 100%;
         max-width: 100%;
+    }
+    html{
+        font-size: 0.8em;
     }
 }

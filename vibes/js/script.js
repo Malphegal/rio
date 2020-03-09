@@ -1,14 +1,14 @@
 $("document").ready(function (){
 
-    // TODO: Le refaire sans JQuery
     // Permet d'utiliser l'accordeon
-    $("#accordeon h4").on("click", function() {
-        $("#accordeon p").slideUp();
-        $(this).siblings("p").slideDown(400);
-        $(this).children("i").toggleClass("fa-minus").toggleClass("fa-plus");
-        $("#accordeon h4").children("i").toggleClass("fa-minus").toggleClass("fa-plus");
+    $("#accordeon h4").on("click", function(){
+        $("#accordeon > div > p").addClass("accordeon-hide");
+        $("#accordeon .fa-minus").removeClass("fa-minus").addClass("fa-plus");
+        
+        $(this).siblings("p").removeClass("accordeon-hide");
+        $(this).find("i").addClass("fa-minus").removeClass("fa-plus");
     });
-
+    
     // Permet de changer la couleur de certains éléments et du fond
     $("#colorpicker input").on("change", function(){
         $("html").css("background-color", $(this).val());
@@ -66,17 +66,22 @@ $("document").ready(function (){
         else
         $("nav a").css("display", "none");
     });
-});
 
-const invertColor = (col) => {
-    if (col == "#808080")
-        return "#999999";
-    const colors = ['0', '1', '2', '3', '4', '5', '6', '7',
-                    '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
-    let inverseColor = '#';
-    col.replace('#','').split('').forEach(i => {
-      const index = colors.indexOf(i);
-      inverseColor += colors.reverse()[index];
+    $(window).scroll(function(){ 
+        let offset = $("#parallaxsection").position().top - screen.height;
+        $("#parallaxsection").css("background-position", "50% " + offset / $(window).scrollTop() * 100 + "%");
     });
-    return inverseColor;
-}
+
+    const invertColor = (col) => {
+        if (col == "#808080")
+            return "#999999";
+        const colors = ['0', '1', '2', '3', '4', '5', '6', '7',
+                        '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+        let inverseColor = '#';
+        col.replace('#','').split('').forEach(i => {
+          const index = colors.indexOf(i);
+          inverseColor += colors.reverse()[index];
+        });
+        return inverseColor;
+    }
+});
