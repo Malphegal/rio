@@ -5,7 +5,8 @@
 }
 
 html{
-    background-color: var(--colorpicker)
+    background-color: var(--colorpicker);
+    scroll-behavior: smooth;
 }
 
 main{
@@ -342,20 +343,6 @@ input[type="color"]::-webkit-color-swatch {
     margin: 1.5em auto;
 }
 
-/* Ancienne version avec un ::after pour les traits des testimonial
-#testimonialsection figure:not(:last-child)::after{
-    background-color: var(--linecolor); 
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: relative;
-    transform: translate(-50%,0);
-    width: 65%;
-    margin-top: 1em;
-}*/
-
 #testimonialsection figure{
     width: 80%;
     margin: auto;
@@ -432,6 +419,7 @@ input[type="color"]::-webkit-color-swatch {
 
 #formsection form input, #formsection form textarea{
     margin: 0.6em auto;
+    padding: 0.5em;
 }
 
 #formsection form > div textarea{
@@ -449,7 +437,6 @@ input[type="color"]::-webkit-color-swatch {
     width: 100%;
     background-color: #ebebeb;
     border: none;
-    padding: 0.5em;
 }
 
 #formsection #submit{
@@ -522,6 +509,10 @@ footer{
 footer a{
     color: white;
     margin: 1em;
+}
+
+footer div{
+    margin-bottom: 1em;
 }
 
 /* ----------------------- */
@@ -623,10 +614,6 @@ footer a{
 
     #formsection #submit{
         margin: auto;
-    }
-
-    #formsection form > div textarea{
-        height: 6em;
     }
 }
 
