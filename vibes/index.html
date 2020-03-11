@@ -4,12 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Le projet vibes</title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
         <link rel="stylesheet" href="css/style.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="textshadowed">
+        <header class="textshadowed headerclass-collapsed flexed">
             <img src="img/logo.jpg" alt="logo site" />
             <nav>
                 <a href="#">HOME</a>
@@ -26,18 +27,18 @@
                 <input type="color" value="#ef7a36">
                 <i class="fas fa-tint"></i>
             </div>
-            <section id="titlesection" class="textshadowed">
+            <section id="titlesection" class="textshadowed flexed">
                 <h1>
                     HTML TEMPLATE FOR CREATIVE FOLKS AND DESIGN AGENCIES
                 </h1>
                 <p>
                     Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                 </p>
-                <button class="coloredbtn">
-                    READ MORE
+                <button class="coloredbtn pointer">
+                    <a href="./" target="_blank">READ MORE</a>
                 </button>
             </section>
-            <section id="descsection" class="flexed padding-0-3 x3">
+            <section id="descsection" class="flexed padding-0-6 padding-2-0 x3">
                 <div>
                     <h2>
                         Why choose us ?
@@ -65,25 +66,25 @@
                 <div id="accordeon">
                     <div>
                         <h4><i class="fas fa-minus"></i> NULLA CONSEQUAT MASSA</h4>
-                        <p>Bla bla</p>
+                        <p>Lorem, ipsum dolor.</p>
                     </div>
                     <div>
                         <h4><i class="fas fa-plus"></i> VIVAMES ELEMENTUM SEMPER</h4>
-                        <p class="accordeon-hide">Bla bla</p>
+                        <p class="accordeon-hide">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam cupiditate, maxime at ex dolorum!</p>
                     </div>
                     <div>
                         <h4><i class="fas fa-plus"></i> ETIAM ULTRICIES NISI VEL</h4>
-                        <p class="accordeon-hide">Bla bla</p>
+                        <p class="accordeon-hide">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
             </section>
             <section id="gallerysection">
                 <div id="modal">
-                    <span class="closemodal">&times;</span>
+                    <span>&times;</span>
                     <div class="modal-image">
                     </div>
                 </div>
-                <figure>
+                <figure class="flexed">
                     <div class="gallery-image">
                         <img src="img/figure/1.jpg" alt="snatti : Corgi puppy"/>
                     </div>
@@ -109,19 +110,19 @@
                         <img src="img/figure/8.jpg" /> <!-- TODO: ALT -->
                     </div>
                 </figure>
-                <div id="gallerysort">
-                    <ul>
-                        <li class="colorpicked"><a href="#gallerysection">ALL</a></li>
-                        <li><a href="#gallerysection">AUDIO</a></li>
-                        <li><a href="#gallerysection">IMAGE</a></li>
-                        <li><a href="#gallerysection">VIDEO</a></li>
+                <div id="gallerysort" class="padding-0-6 flexed">
+                    <ul class="flexed">
+                        <li class="colorpicked">ALL</li>
+                        <li>AUDIO</li>
+                        <li>IMAGE</li>
+                        <li>VIDEO</li>
                     </ul>
-                    <button class="coloredbtn colorpicked">
+                    <button class="coloredbtn colorpicked pointer" id="loadmore">
                         LOAD MORE
                     </button>
                 </div>
             </section>
-            <section id="testimonialsection" class="padding-0-3">
+            <section id="testimonialsection" class="padding-0-6 padding-2-0">
                 <h2>
                     CLIENT TESTIMONIALS
                 </h2>
@@ -129,7 +130,7 @@
 
                 </div>
                 <figure>
-                    <div>
+                    <div class="flexed">
                         <img src="img/avatar/avatar1.png" />
                         <q>
                             Maecenas nec odio et ante tincidunt tempus.
@@ -143,7 +144,7 @@
                     <hr />
                 </figure>
                 <figure>
-                    <div>
+                    <div class="flexed">
                         <img src="img/avatar/avatar2.png" />
                         <q>
                             Etiam sit amet orci eget eros faucibus tincidunt.
@@ -157,7 +158,7 @@
                     <hr />
                 </figure>
                 <figure>
-                    <div>
+                    <div class="flexed">
                         <img src="img/avatar/avatar3.png" />
                         <q>
                             Maecenas nec odio et ante tincidunt tempus.
@@ -168,11 +169,11 @@
                         - <strong class="citename">Mick Neil</strong>, Rock Star
                     </figcaption>
                 </figure>
-                <button class="coloredbtn colorpicked">
+                <button class="coloredbtn colorpicked pointer">
                     BECOME OUR CLIENT
                 </button>
             </section>
-            <section id="parallaxsection" class="textshadowed">
+            <section id="parallaxsection" class="textshadowed padding-2-0 flexed">
                 <h2>
                     NEW HORIZONS AWAIT
                 </h2>
@@ -185,11 +186,11 @@
                     voluptas non cum voluptate quia commodi, veniam harum recusandae!
                     Repellat quasi in sunt cupiditate asperiores.
                 </p>
-                <button class="coloredbtn colorpicked">
+                <button class="coloredbtn colorpicked pointer">
                     BUY VIBES ON THEMEFOREST
                 </button>
             </section>
-            <section id="formsection">
+            <section id="formsection" class="padding-2-0 padding-0-6">
                 <h2>
                     GET IN TOUCH
                 </h2>
@@ -197,8 +198,8 @@
 
                 </div>
                 <form>
-                    <div>
-                        <div>
+                    <div class="flexed">
+                        <div class="flexed">
                             <label class="requiredlabel">Your name</label>
                             <input type="text" id="yourname" />
                             <label class="requiredlabel">Your e-mail</label>
@@ -213,10 +214,10 @@
                             <textarea placeholder="Veuillez écrire votre message ici..."></textarea>
                         </div>
                     </div>
-                    <input type="submit" id="submit" value="SEND" class="coloredbtn colorpicked" />
+                    <input type="submit" id="submit" value="SEND" class="coloredbtn colorpicked pointer" />
                 </form>
             </section>
-            <section id="aboutsection" class="flexed padding-0-3">
+            <section id="aboutsection" class="flexed padding-0-6">
                 <div>
                     <h3>
                         ABOUT VIBES
@@ -230,7 +231,7 @@
                         are wrapped with several gorgeous color schemes.
                     </p>
                     <p>
-                        You can buy this responsive WordPress theme on <a href="">ThemeForest</a>.
+                        You can buy this responsive WordPress theme on <a href="https://themeforest.net/" target="_blank">ThemeForest</a>.
                     </p>
                 </div>
                 <div>
@@ -246,7 +247,7 @@
                     </p>
                     <form>
                         <input type="email" id="aboutemail" placeholder="Your Email Address" />
-                        <input type="button" value="SUBSCRIBE" class="coloredbtn colorpicked" />
+                        <input type="button" value="SUBSCRIBE" class="coloredbtn colorpicked pointer" />
                     </form>
                 </div>
                 <div>
@@ -271,12 +272,12 @@
         </main>
         <footer class="flexed textshadowed">
             <p>
-                Buy this theme on ThemeForest.net
+                Buy this theme on <a href="https://themeforest.net/" target="_blank">ThemeForest.net</a>
             </p>
             <div>
-                <a href="">Home</a>
-                <a href="">Elements</a>
-                <a href="">Documentation</a>
+                <a href="#">Home</a>
+                <a href="#titlesection">Elements</a>
+                <a href="#">Documentation</a>
             </div>
         </footer>
         <script src="js/script.js"></script>

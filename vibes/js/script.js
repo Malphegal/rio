@@ -45,17 +45,27 @@ $("document").ready(function (){
     $("#gallerysection *.gallery-video").append("<i class=\"fas fa-film\"></i>");
     $("#gallerysection *.gallery-audio").append("<i class=\"fas fa-music\"></i>");
 
+    // Affichage de l'image modal de la gallery, ainsi que l'image du header
+    $("#gallerysection *.gallery-image, header img").on("click", openModal);
 
-    // Gestion de l'image modal
-    $("#gallerysection *.gallery-image").on("click", function(){
-        let image = $(this).find("img").attr("src");
-        $(".modal-image").css("background-image", "url(\"./" + image + "\")");
-        $("#modal").css("display", "flex");
+    // Ajouter d'une ligne d'image pour le bouton 'Load more' de la gallery
+    $("#loadmore").on("click", function(){
+        let figure = $("#gallerysection > figure");
+        // S'il n'y a pas encore de nouvelle ligne ajoutée, on en ajoute une
+        // TODO: Voir combien de fois on peut ajouter
+        if (figure.children().length == 8)
+        {
+            for (let i = 0; i < 4; i++){
+                let imgCopy = $(figure.children()[0]).clone();
+                $(imgCopy).find("img").attr("src", "img/figure/" + (9 + i) + ".jpg");
+                $(imgCopy).on("click", openModal);
+                figure.append(imgCopy);
+            }
+        }
     });
 
-    $("#modal span").on("click", function(){
-        $("#modal").css("display", "none");
-    });
+    // Fermeture de l'image modal
+    $("#modal").on("click", closeModal);
 
     // Afficher le menu burger
     $("#burgerbtn").on("click", function(){
@@ -64,15 +74,35 @@ $("document").ready(function (){
         if ($("header").hasClass("headerclass-extended"))
             $("nav a").css("display", "block");
         else
-        $("nav a").css("display", "none");
+            $("nav a").css("display", "none");
     });
 
-    $(window).scroll(function(){ 
+    // Permet de s'occuper du menu burger lors du passage au media queries
+    let oldScreenWidth = window.innerWidth;
+    $(window).on("resize", function(){
+        if (window.innerWidth > 640 && oldScreenWidth <= 640){
+            $("nav a").css("display", "inline");
+            $("header").removeClass("headerclass-extended");
+            $("header").addClass("headerclass-collapsed");
+        }
+        else if (window.innerWidth <= 640 && oldScreenWidth > 640)
+            $("nav a").css("display", "none");
+        oldScreenWidth = window.innerWidth;
+    });
+
+    // Permet de faire un parallax dynamique
+    $(window).on("scroll", function(){ 
         let offset = $("#parallaxsection").position().top - screen.height;
         $("#parallaxsection").css("background-position", "50% " + offset / $(window).scrollTop() * 100 + "%");
     });
 
-    const invertColor = (col) => {
+    // Permet au class 'arrow-moveup' de faire remonter la page tout en haut
+    $(".arrow-moveup").on("click", function(){
+        window.scrollTo(0, 0);
+    })
+
+    // Fonction pour inverser la couleur HEX
+    function invertColor(col){
         if (col == "#808080")
             return "#999999";
         const colors = ['0', '1', '2', '3', '4', '5', '6', '7',
@@ -84,4 +114,67 @@ $("document").ready(function (){
         });
         return inverseColor;
     }
+
+    console.log(oppositeColor("#aaa10a"));
+    function oppositeColor(color){
+
+        String.prototype.replaceAt = function(index, replacement) {
+            return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+        }
+        return color.replaceAt(3, "paze");
+        return color.replace("01", "98");
+        function getOneOpposite(letter){
+            switch (letter) {
+                case "0":
+                    return "9";
+                case "1":
+                    return "a";
+                case "2":
+                    return "b";
+                case "3":
+                    return "c";
+                case "4":
+                    return "d";
+                case "5":
+                    return "e";
+                case "6":
+                    return "f";
+                case "7":
+                    return "0";
+                case "8":
+                    return "1";
+                case "9":
+                    return "2";
+                case "a":
+                    return "3";
+                case "b":
+                    return "4";
+                case "c":
+                    return "5";
+                case "d":
+                    return "6";
+                case "e":
+                    return "7";
+                case "f":
+                    return "8";
+            }
+        }
+    }
+
+    function openModal(){
+        let image = this == $("header img")[0] ? $(this).attr("src") : $(this).find("img").attr("src");
+        $(".modal-image").css("background-image", "url(\"./" + image + "\")");
+        $("#modal").css("display", "flex");
+    }
+
+    function closeModal(){
+        $("#modal").css("display", "none");
+    }
+
+    // TODO: A suppr, pour Jérémie.
+    /*
+    let a = document.getElementsByTagName("header");
+    for(let i = 0; i < a.length; i++)
+        a[i].style["background"] = "red"
+    */
 });
