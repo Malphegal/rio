@@ -6,5 +6,5 @@ Ce projet comporte plusieurs site web indépendants. Ils sont créés dans le bu
 
 Voici la liste des sites :
 
-* [Rio](./Rio)
+* [Rio](./rio)
 * [Vibes](./vibes)
