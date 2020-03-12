@@ -124,6 +124,10 @@ section{
 
 /* ---- HEADER ---- */
 
+header h1{
+    display: none;
+}
+
 header{
     background-color: transparent;
     justify-content: space-between;
