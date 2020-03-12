@@ -93,7 +93,7 @@ $("document").ready(function (){
     // Permet de faire un parallax dynamique
     $(window).on("scroll", function(){ 
         let offset = $("#parallaxsection").position().top - screen.height;
-        $("#parallaxsection").css("background-position", "50% " + offset / $(window).scrollTop() * 130 + "%");
+        $("#parallaxsection").css("background-position", "50% " + offset / $(window).scrollTop() * 100 + "%");
     });
 
     // Permet au class 'arrow-moveup' de faire remonter la page tout en haut

@@ -579,7 +579,7 @@ footer div{
 }
 
 @media screen and (max-width: 640px){
-
+    
     #colorpicker{
         height: 25px;
         width: 25px;
@@ -661,7 +661,7 @@ footer div{
 
     #formsection form > div > div {
         margin: auto;
-        width: 80%;
+        width: 100%;
     }
 
     #formsection #submit{
@@ -689,5 +689,12 @@ footer div{
     }
     html{
         font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .padding-0-6{
+        padding-left: 2em;
+        padding-right: 2em;
     }
 }
